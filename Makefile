@@ -23,7 +23,7 @@ $(OBJ)/%.o: $(SRC)/%.c
 	$(CC) -c $(FLAGS) $(HEADER) $< -o $@
 	ar -rsc $(NAME) $@
 
-bonus: $(NAME) $(BONUS_OBJ)
+bonus: $(OBJ) $(BIN) $(NAME) $(BONUS_OBJ)
 
 $(OBJ)/%.o: $(BONUS)/%.c
 	$(CC) -c $(FLAGS) $(HEADER) $< -o $@
